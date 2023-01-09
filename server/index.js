@@ -51,4 +51,4 @@ mongoose
     // Transaction.insertMany(dataTransaction);
     // User.insertMany(dataUser);
   })
-  .catch((error) => console.log(`${error} di not connect`))
+  .catch((error) => console.log(`${error} did not connect`))
