@@ -6,7 +6,7 @@ import {
   Search,
   SettingsOutlined,
   ArrowDropDownOutlined,
-} from "@mui/icons-material";
+} from "@mui/icons-material"; 
 import FlexBetween from "components/FlexBetween";
 import { useDispatch } from "react-redux";
 import { setMode } from "state";
@@ -24,7 +24,7 @@ import {
   useTheme,
 } from "@mui/material";
 
-const Navbar = ({ user, isSidebarOpen, setIsSidebarOpen }) => {
+const Navbar = ({  isSidebarOpen, setIsSidebarOpen, }) => {
   const dispatch = useDispatch();
   const theme = useTheme();
 
@@ -99,13 +99,13 @@ const Navbar = ({ user, isSidebarOpen, setIsSidebarOpen }) => {
                   fontSize="0.85rem"
                   sx={{ color: theme.palette.secondary[100] }}
                 >
-                  {user.name}
+                  {/* {user.name} */}
                 </Typography>
                 <Typography
                   fontSize="0.75rem"
                   sx={{ color: theme.palette.secondary[200] }}
                 >
-                  {user.occupation}
+                  {/* {user.occupation} */}
                 </Typography>
               </Box>
               <ArrowDropDownOutlined
