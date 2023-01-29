@@ -1,14 +1,16 @@
 import express from "express";
-// import {
+import {
 //   getProducts,
 //   getCustomers,
 //   getTransactions,
 //   getGeography,
-// } from "../controllers/client.js";
-//
+    getBranch,
+} from "../controllers/branch.js";
+// import { getBranch } from "../controllers/general.js";
+
 const router = express.Router();
 
-// router.get("/products", getProducts);
+router.get("/CSE_DS", getBranch);
 // router.get("/customers", getCustomers);
 // router.get("/transactions", getTransactions);
 // router.get("/geography", getGeography);

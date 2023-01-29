@@ -1,16 +1,10 @@
 import express from "express";
-// import {
-//   getProducts,
-//   getCustomers,
-//   getTransactions,
-//   getGeography,
-// } from "../controllers/client.js";
-//
+import { getUser,getBranch, getDashboardStats } from "../controllers/general.js";
+
 const router = express.Router();
 
-// router.get("/products", getProducts);
-// router.get("/customers", getCustomers);
-// router.get("/transactions", getTransactions);
-// router.get("/geography", getGeography);
+router.get("/user/:id", getUser);
+router.get("/branch/:RollNumber", getBranch);
+router.get("/dashboard", getDashboardStats);
 
 export default router;
