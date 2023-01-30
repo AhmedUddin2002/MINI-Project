@@ -97,7 +97,7 @@ const Aiml = () => {
 
   return (
     <Box m="1.5rem 2.5rem">
-      <Header title="AIML" subtitle="Internet of Things Branch" />
+      <Header title="AIML" subtitle="Artificial Intelligence and Machine Learning Branch" />
       {data || !isLoading ? (
         <Box
           mt="20px"

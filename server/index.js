@@ -7,8 +7,9 @@ import helmet from "helmet";
 import morgan from "morgan";
 import branchRoutes from "./routes/branch.js";
 import generalRoutes from "./routes/general.js";
+import overviewRoutes from "./routes/overview.js";
 import managementRoutes from "./routes/management.js";
-// import salesRoutes from "./routes/sales.js";
+import salesRoutes from "./routes/sales.js";
 
 // data imports
 import User from "./models/User.js";
@@ -21,6 +22,8 @@ import AimlData from "./models/AimlModel.js";
 import IotData from "./models/IotModel.js";
 import MechData from "./models/MechModel.js";
 import CivilData from "./models/CivilModel.js";
+import OverviewData from "./models/OverviewModel.js";
+import OverallStat from "./models/OverallStat.js";
 
 // import Product from "./models/Product.js";
 // import ProductStat from "./models/ProductStat.js";
@@ -37,7 +40,7 @@ import {
   // dataProduct,
   // dataProductStat,
   // dataTransaction,
-  // dataOverallStat,
+  dataOverallStat,
   // dataAffiliateStat,
 } from "./data/index.js";
 import {dataBranch} from "./data/BranchesData.js"
@@ -49,6 +52,9 @@ import {dataAiml} from "./data/AimlData.js"
 import {dataIot} from "./data/IotData.js"
 import {dataCivil} from "./data/CivilData.js"
 import {dataMech} from "./data/MechData.js"
+import {dataOverview} from "./data/overviewData.js"
+
+
 /* CONFIGURATION */
 dotenv.config();
 const app = express();
@@ -65,8 +71,9 @@ app.use(cors());
 /* ROUTES */
 app.use("/branch", branchRoutes);
 app.use("/general", generalRoutes);
+app.use("/overview", overviewRoutes);
 app.use("/management", managementRoutes);
-// app.use("/sales", salesRoutes);
+app.use("/sales", salesRoutes);
 
 
 
@@ -98,5 +105,7 @@ mongoose
     // IotData.insertMany(dataIot);
     // CivilData.insertMany(dataCivil);
     // MechData.insertMany(dataMech);
+    // OverviewData.insertMany(dataOverview);
+    // OverallStat.insertMany(dataOverallStat);
   })
   .catch((error) => console.log(`${error} did not connect`))
