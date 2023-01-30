@@ -71,27 +71,27 @@ endpoints: (build) => ({
     }),
     getCse: build.query({
       query: () => "branch/cse",
-      providesTags: ["Cse"],
+      providesTags: ["CSE"],
     }),
     getDs: build.query({
       query: () => "branch/cse_ds",
       providesTags: ["CSE_DS"],
     }),
-    getCse_aiml: build.query({
+    getAiml: build.query({
       query: () => "branch/cse_aiml",
-      providesTags: ["Cse_aiml"],
+      providesTags: ["CSE_AIML"],
     }),
-    getCse_iot: build.query({
+    getIot: build.query({
       query: () => "branch/cse_iot",
-      providesTags: ["Cse_iot"],
+      providesTags: ["CSE_IOT"],
     }),
     getCivil: build.query({
       query: () => "branch/civil",
-      providesTags: ["Civil"],
+      providesTags: ["CIVIL"],
     }),
     getMech: build.query({
       query: () => "branch/mech",
-      providesTags: ["Mech"],
+      providesTags: ["MECH"],
     }),
     getFaculty: build.query({
       query: () => "management/Faculty",
@@ -110,8 +110,9 @@ export const {
   useGetItQuery,
   useGetCseQuery,
   useGetDsQuery,
-  useGetCse_iotQuery,
-  useGetCse_aimlQuery,
+  useGetIotQuery,
+  useGetAimlQuery,
+  useGetCivilQuery,
   useGetMechQuery,
   useGetFacultyQuery,
   useGetDashboardQuery,

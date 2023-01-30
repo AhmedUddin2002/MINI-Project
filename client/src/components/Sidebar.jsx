@@ -73,12 +73,12 @@ const navItems = [
     // icon: null,
 },
   {
-    text: "CSE(AIML)",
+    text: "CSE_AIML",
     icon: <DataObjectOutlinedIcon />,
     // icon: null, 
 },
   {
-    text: "CSE(IOT)",
+    text: "CSE_IOT",
     icon: <DevicesOtherOutlinedIcon />,
     // icon: null, 
 },

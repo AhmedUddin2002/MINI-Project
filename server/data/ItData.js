@@ -51,7 +51,7 @@ export const dataIt = [
     TotalStrength:60,
   },
   {
-    _id: "engineerit4a",
+    _id: "engineerit4b",
     BranchName: "IT",
     Year:4,
     Section:"B", 

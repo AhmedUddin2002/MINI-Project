@@ -2,6 +2,11 @@ import Branches from "../models/Branches.js";
 import BranchesStat from "../models/BranchesStat.js";
 import DsModel from "../models/DsModel.js"
 import ItModel from "../models/ItModel.js"
+import CseModel from "../models/CseModel.js"
+import AimlModel from "../models/AimlModel.js"
+import IotModel from "../models/IotModel.js"
+import CivilModel from "../models/CivilModel.js"
+import MechModel from "../models/MechModel.js"
 // import User from "../models/User.js";
 // import Transaction from "../models/Transaction.js";
 // import getCountryIso3 from "country-iso-2-to-3";
@@ -55,10 +60,115 @@ export const getIt = async (req, res) => {
     const BranchWithStats = await Promise.all(
       It.map(async (ItModel) => {
         const stat = await BranchesStat.find({
-          ItId: DsModel._id,
+          ItId: ItModel._id,
         });
         return {
           ...ItModel._doc,
+          stat,
+        };
+      })
+    );
+
+    res.status(200).json(BranchWithStats);
+  } catch (error) {
+    res.status(404).json({ message: error.message });
+  }
+};
+export const getCse = async (req, res) => {
+  try {
+    const Cse = await CseModel.find();
+
+    const BranchWithStats = await Promise.all(
+      Cse.map(async (CseModel) => {
+        const stat = await BranchesStat.find({
+          ItId: CseModel._id,
+        });
+        return {
+          ...CseModel._doc,
+          stat,
+        };
+      })
+    );
+
+    res.status(200).json(BranchWithStats);
+  } catch (error) {
+    res.status(404).json({ message: error.message });
+  }
+};
+export const getAiml = async (req, res) => {
+  try {
+    const Aiml = await AimlModel.find();
+
+    const BranchWithStats = await Promise.all(
+      Aiml.map(async (AimlModel) => {
+        const stat = await BranchesStat.find({
+          AimlId: AimlModel._id,
+        });
+        return {
+          ...AimlModel._doc,
+          stat,
+        };
+      })
+    );
+
+    res.status(200).json(BranchWithStats);
+  } catch (error) {
+    res.status(404).json({ message: error.message });
+  }
+};
+export const getIot = async (req, res) => {
+  try {
+    const Iot = await IotModel.find();
+
+    const BranchWithStats = await Promise.all(
+      Iot.map(async (IotModel) => {
+        const stat = await BranchesStat.find({
+          IotId: IotModel._id,
+        });
+        return {
+          ...IotModel._doc,
+          stat,
+        };
+      })
+    );
+
+    res.status(200).json(BranchWithStats);
+  } catch (error) {
+    res.status(404).json({ message: error.message });
+  }
+};
+export const getCivil = async (req, res) => {
+  try {
+    const Civil = await CivilModel.find();
+
+    const BranchWithStats = await Promise.all(
+      Civil.map(async (CivilModel) => {
+        const stat = await BranchesStat.find({
+          CivilId: IotModel._id,
+        });
+        return {
+          ...CivilModel._doc,
+          stat,
+        };
+      })
+    );
+
+    res.status(200).json(BranchWithStats);
+  } catch (error) {
+    res.status(404).json({ message: error.message });
+  }
+};
+export const getMech = async (req, res) => {
+  try {
+    const Mech = await MechModel.find();
+
+    const BranchWithStats = await Promise.all(
+      Mech.map(async (MechModel) => {
+        const stat = await BranchesStat.find({
+          MechId: IotModel._id,
+        });
+        return {
+          ...MechModel._doc,
           stat,
         };
       })
