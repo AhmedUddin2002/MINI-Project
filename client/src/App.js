@@ -6,6 +6,13 @@ import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { themeSettings } from "theme";
 import Layout from "scenes/layout";
 import Dashboard from "scenes/dashboard";
+import CseDs from "scenes/cse_ds";
+import It from "scenes/it";
+import Cse from "scenes/cse";
+import Aiml from "scenes/aiml";
+import Iot from "scenes/iot";
+import Mech from "scenes/mech";
+import Civil from "scenes/civil";
 // import Products from "scenes/products";
 // import Customers from "scenes/customers";
 // import Transactions from "scenes/transactions";
@@ -29,7 +36,13 @@ function App() {
             <Route element={<Layout />}>
               <Route path="/" element={<Navigate to="/dashboard" replace />} />
               <Route path="/dashboard" element={<Dashboard />} />
-              {/* <Route path="/products" element={<Products />} /> */}
+              <Route path="/cse_ds" element={<CseDs />} />
+              <Route path="/it" element={<It />} />
+              <Route path="/cse" element={<Cse />} />
+              <Route path="/cse_aiml" element={<Aiml />} />
+              <Route path="/cse_iot" element={<Iot />} />
+              <Route path="/civil" element={<Civil />} />
+              <Route path="/mech" element={<Mech />} />
               {/* <Route path="/customers" element={<Customers />} /> */}
               {/* <Route path="/transactions" element={<Transactions />} /> */}
               {/* <Route path="/geography" element={<Geography />} /> */}

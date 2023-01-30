@@ -10,8 +10,45 @@ import generalRoutes from "./routes/general.js";
 import managementRoutes from "./routes/management.js";
 // import salesRoutes from "./routes/sales.js";
 
+// data imports
+import User from "./models/User.js";
+import Branches from "./models/Branches.js";
+import BranchesStat from "./models/BranchesStat.js";
+import DsData from "./models/DsModel.js";
+import ItData from "./models/ItModel.js";
+import CseData from "./models/CseModel.js";
+import AimlData from "./models/AimlModel.js";
+import IotData from "./models/IotModel.js";
+import MechData from "./models/MechModel.js";
+import CivilData from "./models/CivilModel.js";
+
+// import Product from "./models/Product.js";
+// import ProductStat from "./models/ProductStat.js";
+// import Transaction from "./models/Transaction.js";
+// import OverallStat from "./models/OverallStat.js";
+// import AffiliateStat from "./models/AffiliateStat.js";
 
 
+
+// Import the data
+import {
+  dataUser,
+  // ClgBranch,
+  // dataProduct,
+  // dataProductStat,
+  // dataTransaction,
+  // dataOverallStat,
+  // dataAffiliateStat,
+} from "./data/index.js";
+import {dataBranch} from "./data/BranchesData.js"
+import {dataBranchesStat} from "./data/BranchesStatData.js"
+import {dataDs} from "./data/DsData.js"
+import {dataIt} from "./data/ItData.js"
+import {dataCse} from "./data/CseData.js"
+import {dataAiml} from "./data/AimlData.js"
+import {dataIot} from "./data/IotData.js"
+import {dataCivil} from "./data/CivilData.js"
+import {dataMech} from "./data/MechData.js"
 /* CONFIGURATION */
 dotenv.config();
 const app = express();
@@ -44,11 +81,22 @@ mongoose
     app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
 
     /* ONLY ADD DATA ONE TIME */
+
     // AffiliateStat.insertMany(dataAffiliateStat);
     // OverallStat.insertMany(dataOverallStat);
     // Product.insertMany(dataProduct);
     // ProductStat.insertMany(dataProductStat);
     // Transaction.insertMany(dataTransaction);
+
     // User.insertMany(dataUser);
+    // Branches.insertMany(dataBranch);
+    // BranchesStat.insertMany(dataBranchesStat);
+    // DsData.insertMany(dataDs);
+    // ItData.insertMany(dataIt);
+    // CseData.insertMany(dataCse);
+    // AimlData.insertMany(dataAiml);
+    // IotData.insertMany(dataIot);
+    // CivilData.insertMany(dataCivil);
+    // MechData.insertMany(dataMech);
   })
   .catch((error) => console.log(`${error} did not connect`))

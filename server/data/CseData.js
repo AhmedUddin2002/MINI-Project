@@ -1,0 +1,58 @@
+export const dataCse = [
+ {
+          _id: "engineecse1a",
+          BranchName: "CSE",
+          Year:1,
+          Section:"A", 
+          TotalStrength:60,
+        },
+        {
+          _id: "engineecse1b",
+          BranchName: "CSE",
+          Year:1,
+          Section:"B",
+          TotalStrength:60,
+        },
+        {
+          _id: "engineecse2a",
+          BranchName: "CSE",
+          Year:2,
+          Section:"A", 
+          TotalStrength:60,
+        },
+        {
+          _id: "engineecse2b",
+          BranchName: "CSE",
+          Year:2,
+          Section:"B",
+          TotalStrength:60,
+        },
+        {
+          _id: "engineecse3a",
+          BranchName: "CSE",
+          Year:3,
+          Section:"A",
+          TotalStrength:60,
+        },
+        {
+          _id: "engineecse3b",
+          BranchName: "CSE",
+          Year:3,
+          Section:"B",
+          TotalStrength:60,
+        },
+        {
+          _id: "engineecse4a",
+          BranchName: "CSE",
+          Year:4,
+          Section:"A",
+          TotalStrength:60,
+        },
+        {
+          _id: "engineecse4b",
+          BranchName: "CSE",
+          Year:4,
+          Section:"B", 
+          TotalStrength:60,
+        },
+    ];

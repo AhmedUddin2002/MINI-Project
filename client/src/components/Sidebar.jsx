@@ -58,7 +58,7 @@ const navItems = [
     icon: null,
   },
   {
-    text: " IT",
+    text: "IT",
     icon: <SatelliteAltOutlinedIcon/>,
     // icon: null,
   },
@@ -68,17 +68,17 @@ const navItems = [
     // icon: null,
 },
   {
-    text: "CSE(DS)",
+    text: "CSE_DS",
     icon: <DataUsageOutlinedIcon />,
     // icon: null,
 },
   {
-    text: "CSE(AIML)",
+    text: "CSE_AIML",
     icon: <DataObjectOutlinedIcon />,
     // icon: null, 
 },
   {
-    text: "CSE(IOT)",
+    text: "CSE_IOT",
     icon: <DevicesOtherOutlinedIcon />,
     // icon: null, 
 },
@@ -219,7 +219,7 @@ const Sidebar = ({
             </List>
           </Box>
 
-          {/* <Box position="absolute" bottom="2rem">
+           <Box position="absolute" bottom="-8rem">
             <Divider />
             <FlexBetween textTransform="none" gap="1rem" m="1.5rem 2rem 0 3rem">
               <Box
@@ -253,7 +253,7 @@ const Sidebar = ({
                 }}
               />
             </FlexBetween>
-          </Box> */}
+          </Box> 
         </Drawer>
       )}
     </Box>
