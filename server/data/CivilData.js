@@ -1,0 +1,57 @@
+export const dataCivil = [
+    {
+        _id: "engcivil1a",
+        BranchName: "Civil",
+        Year:1,
+        Section:"A", 
+        TotalStrength:60,
+      },
+      {
+        _id: "engcivil1b",
+        BranchName: "Civil",
+        Year:1,
+        Section:"B",
+        TotalStrength:60, 
+      },
+    {
+        _id: "engcivil2a",
+        BranchName: "Civil",
+        Year:2,
+        Section:"A", 
+        TotalStrength:60,
+      },
+      {
+        _id: "engcivil2b",
+        BranchName: "Civil",
+        Year:2,
+        Section:"B",
+        TotalStrength:60, 
+      },
+      {
+        _id: "engcivil3a",
+        BranchName: "Civil",
+        Year:3,
+        Section:"A", 
+        TotalStrength:60,
+      },
+      {
+        _id: "engcivil3b",
+        BranchName: "Civil",
+        Year:3,
+        Section:"B", 
+        TotalStrength:60,
+      },
+      {
+        _id: "engcivil4a",
+        BranchName: "Civil",
+        Year:4,
+        Section:"A", 
+        TotalStrength:60,
+      },
+      {
+        _id: "engcivil4b",
+        BranchName: "Civil",
+        Year:4,
+        Section:"B", 
+        TotalStrength:60,
+      },];

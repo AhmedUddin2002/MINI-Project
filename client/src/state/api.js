@@ -61,17 +61,21 @@ endpoints: (build) => ({
       query: (id) => `general/user/${id}`,
       providesTags: ["User"],
     }),
+    getBranch: build.query({
+      query: () => `branch/cse_ds`,
+      providesTags: ["Branch"],
+    }),
     getIt: build.query({
       query: () => "branch/it",
-      providesTags: ["It"],
+      providesTags: ["IT"],
     }),
     getCse: build.query({
       query: () => "branch/cse",
       providesTags: ["Cse"],
     }),
-    getCse_ds: build.query({
+    getDs: build.query({
       query: () => "branch/cse_ds",
-      providesTags: ["Cse_ds"],
+      providesTags: ["CSE_DS"],
     }),
     getCse_aiml: build.query({
       query: () => "branch/cse_aiml",
@@ -102,9 +106,10 @@ endpoints: (build) => ({
 
 export const {
   useGetUserQuery,
+  useGetBranchQuery,
   useGetItQuery,
   useGetCseQuery,
-  useGetCse_dsQuery,
+  useGetDsQuery,
   useGetCse_iotQuery,
   useGetCse_aimlQuery,
   useGetMechQuery,

@@ -14,11 +14,18 @@ import managementRoutes from "./routes/management.js";
 import User from "./models/User.js";
 import Branches from "./models/Branches.js";
 import BranchesStat from "./models/BranchesStat.js";
+import DsData from "./models/DsModel.js";
+import ItData from "./models/ItModel.js";
+
 // import Product from "./models/Product.js";
 // import ProductStat from "./models/ProductStat.js";
 // import Transaction from "./models/Transaction.js";
 // import OverallStat from "./models/OverallStat.js";
 // import AffiliateStat from "./models/AffiliateStat.js";
+
+
+
+// Import the data
 import {
   dataUser,
   // ClgBranch,
@@ -30,6 +37,8 @@ import {
 } from "./data/index.js";
 import {dataBranch} from "./data/BranchesData.js"
 import {dataBranchesStat} from "./data/BranchesStatData.js"
+import {dataDs} from "./data/DsData.js"
+import {dataIt} from "./data/ItData.js"
 /* CONFIGURATION */
 dotenv.config();
 const app = express();
@@ -72,5 +81,7 @@ mongoose
     // User.insertMany(dataUser);
     // Branches.insertMany(dataBranch);
     // BranchesStat.insertMany(dataBranchesStat);
+    // DsData.insertMany(dataDs);
+    // ItData.insertMany(dataIt);
   })
   .catch((error) => console.log(`${error} did not connect`))

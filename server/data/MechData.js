@@ -1,0 +1,57 @@
+export const dataMech = [
+{
+    _id: "engmech1a",
+    BranchName: "Mech",
+    Year:1,
+    Section:"A", 
+    TotalStrength:60,
+  },
+  {
+    _id: "engmechl1b",
+    BranchName: "Mech",
+    Year:1,
+    Section:"B",
+    TotalStrength:60, 
+  },
+{
+    _id: "engmech2a",
+    BranchName: "Mech",
+    Year:2,
+    Section:"A", 
+    TotalStrength:60,
+  },
+  {
+    _id: "engcivil2b",
+    BranchName: "Mech",
+    Year:2,
+    Section:"B",
+    TotalStrength:60, 
+  },
+  {
+    _id: "engcivil3a",
+    BranchName: "Mech",
+    Year:3,
+    Section:"A", 
+    TotalStrength:60,
+  },
+  {
+    _id: "engcivil3b",
+    BranchName: "Mech",
+    Year:3,
+    Section:"B", 
+    TotalStrength:60,
+  },
+  {
+    _id: "engcivil4a",
+    BranchName: "Mech",
+    Year:4,
+    Section:"A", 
+    TotalStrength:60,
+  },
+  {
+    _id: "engcivil4b",
+    BranchName: "Mech",
+    Year:4,
+    Section:"B", 
+    TotalStrength:60,
+  },];

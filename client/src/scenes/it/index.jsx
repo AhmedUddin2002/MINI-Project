@@ -13,11 +13,11 @@ import {
 } from "@mui/material";
 import Header from "components/Header";
 // import { useGetCse_dsQuery } from "state/api";
-import { useGetBranchQuery } from "state/api";
+import { useGetItQuery } from "state/api";
 
 
 
-const Ds = ({
+const It = ({
   _id,
   BranchName,
   Year,
@@ -90,14 +90,14 @@ const Ds = ({
 
 
 const Cse_ds = () => {
-  const { data, isLoading } = useGetBranchQuery();
+  const { data, isLoading } = useGetItQuery();
   console.log("data", data)
   
   const isNonMobile = useMediaQuery("(min-width: 1000px)");
 
   return (
     <Box m="1.5rem 2.5rem">
-      <Header title="CSE(DS)" subtitle="Data Science Branch" />
+      <Header title="IT" subtitle="Information Technology Branch" />
       {data || !isLoading ? (
         <Box
           mt="20px"
@@ -118,7 +118,7 @@ const Cse_ds = () => {
               Section,
               TotalStrength,
             }) => (
-              <Ds
+              <It
                 // key={_id}
                 _id={_id}
                 BranchName={BranchName}

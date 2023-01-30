@@ -58,7 +58,7 @@ const navItems = [
     icon: null,
   },
   {
-    text: " IT",
+    text: "IT",
     icon: <SatelliteAltOutlinedIcon/>,
     // icon: null,
   },

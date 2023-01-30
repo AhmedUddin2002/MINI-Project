@@ -1,6 +1,7 @@
 import Branches from "../models/Branches.js";
-// import Product from "../models/Branches.js";
 import BranchesStat from "../models/BranchesStat.js";
+import DsModel from "../models/DsModel.js"
+import ItModel from "../models/ItModel.js"
 // import User from "../models/User.js";
 // import Transaction from "../models/Transaction.js";
 // import getCountryIso3 from "country-iso-2-to-3";
@@ -10,12 +11,54 @@ export const getBranch = async (req, res) => {
     const Branch = await Branches.find();
 
     const BranchWithStats = await Promise.all(
-      Branch.map(async (product) => {
+      Branch.map(async (Branches) => {
         const stat = await BranchesStat.find({
           BranchId: Branches._id,
         });
         return {
           ...Branches._doc,
+          stat,
+        };
+      })
+    );
+
+    res.status(200).json(BranchWithStats);
+  } catch (error) {
+    res.status(404).json({ message: error.message });
+  }
+};
+export const getDs = async (req, res) => {
+  try {
+    const Ds = await DsModel.find();
+
+    const BranchWithStats = await Promise.all(
+      Ds.map(async (DsModel) => {
+        const stat = await BranchesStat.find({
+          DsId: DsModel._id,
+        });
+        return {
+          ...DsModel._doc,
+          stat,
+        };
+      })
+    );
+
+    res.status(200).json(BranchWithStats);
+  } catch (error) {
+    res.status(404).json({ message: error.message });
+  }
+};
+export const getIt = async (req, res) => {
+  try {
+    const It = await ItModel.find();
+
+    const BranchWithStats = await Promise.all(
+      It.map(async (ItModel) => {
+        const stat = await BranchesStat.find({
+          ItId: DsModel._id,
+        });
+        return {
+          ...ItModel._doc,
           stat,
         };
       })

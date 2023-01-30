@@ -17,7 +17,7 @@ const BranchesStatSchema = new mongoose.Schema(
       {
         date: String,
         totalClasses: Number,
-        totalConducted: Number,
+        totalClassesConducted: Number,
       },
     ],
   },
