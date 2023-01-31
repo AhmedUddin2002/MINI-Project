@@ -2,10 +2,10 @@ import React, { useMemo } from "react";
 import { Box, useTheme } from "@mui/material";
 import Header from "components/Header";
 import { ResponsiveLine } from "@nivo/line";
-import { useGetOverviewsQuery } from "state/api";
+import { useGetSalesQuery } from "state/api";
 
 const Monthly = () => {
-  const { data } = useGetOverviewsQuery();
+  const { data } = useGetSalesQuery();
   const theme = useTheme();
 
   const [formattedData] = useMemo(() => {
@@ -40,7 +40,7 @@ const Monthly = () => {
 
   return (
     <Box m="1.5rem 2.5rem">
-      <Header title="MONTHLY CLASSES" subtitle="Chart of monthly Classes" />
+      <Header title="Monthly Classes" subtitle="Chart of monthly classes" />
       <Box height="75vh">
         {data ? (
           <ResponsiveLine

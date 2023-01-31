@@ -2,54 +2,54 @@ import React, { useMemo } from "react";
 // import { ResponsiveLine } from "@nivo/line";
 import {ResponsiveLine} from "@nivo/line";
 import { useTheme} from "@mui/material";
-import { useGetSalesQuery } from "state/api";
+import { useGetOverviewsQuery } from "state/api";
 
 const OverviewChart = ({ isDashboard = false, view }) => {
   const theme = useTheme();
-  const { data, isLoading } = useGetSalesQuery();
+  const { data, isLoading } = useGetOverviewsQuery();
 
-  const [totalSalesLine, totalUnitsLine] = useMemo(() => {
+  const [totalClassesLine, totalConductedLine] = useMemo(() => {
     if (!data) return [];
 
     const { monthlyData } = data;
-    const totalSalesLine = {
-      id: "totalSales",
+    const totalClassesLine = {
+      id: "totalClasses",
       color: theme.palette.secondary.main,
       data: [],
     };
-    const totalUnitsLine = {
-      id: "totalUnits",
+    const totalConductedLine = {
+      id: "totalConducted",
       color: theme.palette.secondary[600],
       data: [],
     };
 
     Object.values(monthlyData).reduce(
-      (acc, { month, totalSales, totalUnits }) => {
-        const curSales = acc.sales + totalSales;
-        const curUnits = acc.units + totalUnits;
+      (acc, { month, totalClasses, totalConducted }) => {
+        const curClasses = acc.classes + totalClasses;
+        const curConducted = acc.conducted + totalConducted;
 
-        totalSalesLine.data = [
-          ...totalSalesLine.data,
-          { x: month, y: curSales },
+        totalClassesLine.data = [
+          ...totalClassesLine.data,
+          { x: month, y: curClasses },
         ];
-        totalUnitsLine.data = [
-          ...totalUnitsLine.data,
-          { x: month, y: curUnits },
+        totalConductedLine.data = [
+          ...totalConductedLine.data,
+          { x: month, y: curConducted },
         ];
 
-        return { sales: curSales, units: curUnits };
+        return { classes: curClasses, conducted: curConducted };
       },
-      { sales: 0, units: 0 }
+      { classes: 0, conducted: 0 }
     );
 
-    return [[totalSalesLine], [totalUnitsLine]];
+    return [[totalClassesLine], [totalConductedLine]];
   }, [data]); // eslint-disable-line react-hooks/exhaustive-deps
 
   if (!data || isLoading) return "Loading...";
 
   return (
     <ResponsiveLine
-      data={view === "sales" ? totalSalesLine : totalUnitsLine}
+      data={view === "classes" ? totalClassesLine : totalConductedLine}
       theme={{
         axis: {
           domain: {
@@ -118,7 +118,7 @@ const OverviewChart = ({ isDashboard = false, view }) => {
         tickRotation: 0,
         legend: isDashboard
           ? ""
-          : `Total ${view === "sales" ? "Revenue" : "Units"} for Year`,
+          : `Total ${view === "classes" ? "Revenue" : "Units"} for Year`,
         legendOffset: -60,
         legendPosition: "middle",
       }}

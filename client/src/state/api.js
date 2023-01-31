@@ -103,10 +103,10 @@ endpoints: (build) => ({
       query: () => "overviews/overviews",
       providesTags: ["Overviews"],
     }),
-    // getSales: build.query({
-    //   query: () => "sales/sales",
-    //   providesTags: ["Sales"],
-    // }),
+    getSales: build.query({
+      query: () => "sales/sales",
+      providesTags: ["Sales"],
+    }),
     getDashboard: build.query({
       query: () => "general/dashboard",
       providesTags: ["Dashboard"],
