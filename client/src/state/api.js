@@ -96,7 +96,7 @@ endpoints: (build) => ({
       providesTags: ["MECH"],
     }),
     getFaculty: build.query({
-      query: () => "management/Faculty",
+      query: () => "branch/Faculty",
       providesTags: ["Faculty"],
     }),
     getOverviews: build.query({

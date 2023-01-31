@@ -13,12 +13,12 @@ const Monthly = () => {
 
     const { monthlyData } = data;
     const totalSalesLine = {
-      id: "totalSales",
+      id: "totalClasses",
       color: theme.palette.secondary.main,
       data: [],
     };
     const totalUnitsLine = {
-      id: "totalUnits",
+      id: "Attended",
       color: theme.palette.secondary[600],
       data: [],
     };
