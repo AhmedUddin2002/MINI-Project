@@ -7,7 +7,8 @@ import AimlModel from "../models/AimlModel.js"
 import IotModel from "../models/IotModel.js"
 import CivilModel from "../models/CivilModel.js"
 import MechModel from "../models/MechModel.js"
-// import User from "../models/User.js";
+import Overview from "../models/OverviewModel.js"
+import User from "../models/User.js";
 // import Transaction from "../models/Transaction.js";
 // import getCountryIso3 from "country-iso-2-to-3";
 
@@ -179,15 +180,14 @@ export const getMech = async (req, res) => {
     res.status(404).json({ message: error.message });
   }
 };
-
-// export const getCustomers = async (req, res) => {
-//   try {
-//     const customers = await User.find({ role: "user" }).select("-password");
-//     res.status(200).json(customers);
-//   } catch (error) {
-//     res.status(404).json({ message: error.message });
-//   }
-// };
+export const getFaculty = async (req, res) => {
+  try {
+    const faculty = await User.find({ role: "user" }).select("-password");
+    res.status(200).json(faculty);
+  } catch (error) {
+    res.status(404).json({ message: error.message });
+  }
+};
 
 // export const getTransactions = async (req, res) => {
 //   try {

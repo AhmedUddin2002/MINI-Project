@@ -12,6 +12,7 @@ import {
     getIot,
     getMech,
     getCivil,
+    getFaculty,
 } from "../controllers/branch.js";
 // import { getBranch } from "../controllers/general.js";
 
@@ -25,6 +26,7 @@ router.get("/CSE_AIML", getAiml);
 router.get("/CSE_IOT", getIot);
 router.get("/CIVIL", getCivil);
 router.get("/MECH", getMech);
+router.get("/FACULTY", getFaculty);
 // router.get("/customers", getCustomers);
 // router.get("/transactions", getTransactions);
 // router.get("/geography", getGeography);

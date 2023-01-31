@@ -2307,9 +2307,9 @@ export const dataOverallStat = [
       { date: "2021-12-31", totalSales: 1326, totalUnits: 360 },
     ],
     salesByCategory: {
-      shoes: 6515,
-      clothing: 22803,
-      accessories: 16288,
+      Theory: 6515,
+      Practicals: 22803,
+      Seminars: 16288,
       misc: 19545,
     },
     _id: "636ffd4fc7195768677097d7",

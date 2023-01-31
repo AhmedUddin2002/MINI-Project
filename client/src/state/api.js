@@ -13,6 +13,8 @@ export const api = createApi({
     "CIVIL",
     "MECH",
     "Faculty",
+    "Overviews",
+    "Sales",
   ],
 //   endpoints: (build) => ({
 //     getUser: build.query({
@@ -94,8 +96,16 @@ endpoints: (build) => ({
       providesTags: ["MECH"],
     }),
     getFaculty: build.query({
-      query: () => "management/Faculty",
+      query: () => "branch/Faculty",
       providesTags: ["Faculty"],
+    }),
+    getOverviews: build.query({
+      query: () => "overviews/overviews",
+      providesTags: ["Overviews"],
+    }),
+    getSales: build.query({
+      query: () => "sales/sales",
+      providesTags: ["Sales"],
     }),
     getDashboard: build.query({
       query: () => "general/dashboard",
@@ -116,4 +126,6 @@ export const {
   useGetMechQuery,
   useGetFacultyQuery,
   useGetDashboardQuery,
+  useGetOverviewsQuery,
+  useGetSalesQuery,
 } = api;
